@@ -1,8 +1,5 @@
-m3u8_list_upload_path = 'https://skylive.coolhd.hu/write'
+m3u8_list_upload_path = 'https://scp.techandsupply.ca/write'
 upload_portals = [
-    'https://skynet.tutemwesi.com',
-    'https://skyportal.xyz',
-    'https://siasky.net',
-    'https://skynethub.io',
-    'https://siacdn.com',
+    'https://scp.techandsupply.ca',
+    'https://scprime.hashpool.eu',
 ]
