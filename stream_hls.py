@@ -5,7 +5,7 @@ import os
 import cv2
 import requests
 import shutil
-from scprimepubaccess import Pubaccess
+from pubaccess import Pubaccess
 import subprocess
 from tabulate import tabulate
 from threading import Thread
