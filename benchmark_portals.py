@@ -1,5 +1,5 @@
 import time
-from siaskynet import Skynet
+from pubaccess import Pubaccess
 import os
 
 def time_to_str(value):
@@ -17,26 +17,13 @@ f = open("2MBfile.txt", "w+")
 text = ''
 # generate 2MB text
 for i in range(262144):
-	text += 'SkyLive '
+	text += 'PubLive '
 f.write(text)
 f.close()
 
 portals = [
-	'https://skynet.coolhd.hu',
-	'https://skynet.luxor.tech',
-	'https://vault.lightspeedhosting.com',
-	'https://skydrain.net',
-	'https://skynethub.io',
-	'https://sialoop.net',
-	'https://skynet.utxo.no',
-	'https://skynet.tutemwesi.com',
-	'https://skyportal.xyz',
-	'https://skynet.cloudloop.io',
-	'https://siacdn.com',
-	'https://siasky.net',
-	'https://germany.siasky.net',
-	'https://helsinki.siasky.net',
-	'https://us-west.siasky.net/',
+	'https://scp.techandsupply.ca',
+	'https://scprime.hashpool.eu',
 ]
 results = []
 
