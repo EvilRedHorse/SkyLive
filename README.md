@@ -1,20 +1,18 @@
-# Skylive
+# Publive
 
-Live HLS video streams hosted on Skynet. SkyLive is under heavy development, streaming will be much more easyer in some weeks for non-tech users.
+Live HLS video streams hosted on Public Portals. PubLive is under heavy development, streaming will be much more easier in some weeks for non-tech users.
 
-[Check out our roadmap](https://github.com/DaWe35/SkyLive/projects/3)
-
-Explore streams: https://skylive.coolhd.hu
+Explore streams: https://scp.techandsupply.ca
 
 # How to start stream
 
-- Download & extract the latest binaries from [releases](https://github.com/DaWe35/SkyLive/releases)
+- Download & extract the latest binaries from [releases](https://github.com/EvilRedHorse/SkyLive/releases)
 
-- Register a SkyLive account and scheule a new stream.
+- Register a PubLive account and scheule a new stream.
 
 - Open command prompt and start the uploader with this command: `"C:\\path\to\stream_hls.exe" --record_folder "C:\\path\to\record_here"`
 
-- Enter the generated stream token from https://SkyLive.coolhd.hu/studio
+- Enter the generated stream token from https://scp.techandsupply.ca/studio
 
 - Setup OBS (below) and start recording into the 'record_here' folder!
 
@@ -26,7 +24,7 @@ Explore streams: https://skylive.coolhd.hu
 
 - Close stream_hls.exe
 
-- Open https://SkyLive.coolhd.hu/studio and `Finish` the stream (after this, it will be seekable)
+- Open https://scp.techandsupply.ca/studio and `Finish` the stream (after this, it will be seekable)
 
 # Setup OBS:
 
@@ -36,7 +34,7 @@ Explore streams: https://skylive.coolhd.hu
   
   Currently, there is a [bug](https://github.com/obsproject/obs-studio/issues/2500) in OBS, so you can't record more than 14 chunks into m3u8 (tested on Win10 only). It is recommended to try it out on your system, maybe you can record more than 16 chunks (please write your experience [in a comment](https://github.com/obsproject/obs-studio/issues/2500). But while the issue is not fixed, we need to use the custom ffmpeg output:
   
-  ![OBS settings](https://raw.githubusercontent.com/DaWe35/Skylive/master/docs/obs_settings.jpg)
+  ![OBS settings](https://raw.githubusercontent.com/EvilRedHorse/Skylive/master/docs/obs_settings.jpg)
 
     - Output mode: *Advanced*
     
@@ -44,7 +42,7 @@ Explore streams: https://skylive.coolhd.hu
     
       *Without FFmpeg, the recording may be stuck after 14 or 33 chunks*
     
-    - File path: *.../Skylive/record_here*
+    - File path: *.../Publive/record_here*
     
       *This is important, the python script will search for new files in 'record_here'*
     
@@ -62,19 +60,19 @@ Explore streams: https://skylive.coolhd.hu
       
       *Try out some, but be careful: if you see this warning, viewers will experience buffering*
       
-      ![OBS recording overloaded](https://raw.githubusercontent.com/DaWe35/Skylive/master/docs/overload.jpg)
+      ![OBS recording overloaded](https://raw.githubusercontent.com/EvilRedHorse/Skylive/master/docs/overload.jpg)
     
     - Under Settings -> Advanced -> Recording, change the Filename Formatting to `live` - that's enough (and important!)
     
-      ![OBS filename](https://raw.githubusercontent.com/DaWe35/Skylive/master/docs/obs_filename.jpg)
+      ![OBS filename](https://raw.githubusercontent.com/EvilRedHorse/Skylive/master/docs/obs_filename.jpg)
 
 # Restream m3u8 from Youtube/Twitch
 
-You can restream any public Youtube/Twitch stream to SkyLive without any transcoding or screen recording. The `stream_downloader.py` will download live stream on-demand, so you can re-upload it to SkyLive with `stream_hls.py`.
+You can restream any public Youtube/Twitch stream to PubLive without any transcoding or screen recording. The `stream_downloader.py` will download live stream on-demand, so you can re-upload it to PubLive with `stream_hls.py`.
 
 Usage: 
 
-`cd C:\\path\to\SkyLive`
+`cd C:\\path\to\PubLive`
 
 Start downloader:
 
@@ -94,6 +92,6 @@ After the stream, you can easily convert the .ts chunks into one mp4 file:
 
 ### Optional: setup you own playlist server
 
-- Running a you-own SkyLive portal needs PHP and MySQL. On Windows, I recommend wamp.net. The root directory of the website needs to be the `server` folder.
+- Running a you-own PubLive portal needs PHP and MySQL. On Windows, I recommend wamp.net. The root directory of the website needs to be the `server` folder.
 - Copy `server/config_default.php` to `server/config.php` and change the settings.
-- Import skylive.sql into MySQL.
+- Import publive.sql into MySQL.
