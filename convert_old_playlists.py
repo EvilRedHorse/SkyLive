@@ -12,7 +12,7 @@ def share(length, link, is_first_chunk):
 		'length': length,
 		'is_first_chunk': is_first_chunk
 		}
-	x = requests.post('http://skylive.local/write', data = post)
+	x = requests.post('http://publive.local/write', data = post)
 	if (x.text != 'ok'):
 		print(x.text)
 		exit(0)
@@ -30,8 +30,8 @@ for line in lines:
 	if line.startswith('#EXTINF:'):
 		length = line.replace('#EXTINF:', '')
 		length = length.replace(',', '')
-	elif line.startswith('https://siasky.net/'):
-		link = line.replace('https://siasky.net/', '')
+	elif line.startswith('https://scp.techandsupply.ca/'):
+		link = line.replace('https://scp.techandsupply.ca/', '')
 		share(length, link, is_first_chunk)
 		is_first_chunk = 0
 
